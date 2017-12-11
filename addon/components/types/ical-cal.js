@@ -1,7 +1,7 @@
 import Base from '../button-base';
 import layout from '../../templates/components/types/ical-cal';
 import moment from 'moment';
-import {computed} from '@ember/object';
+import {computed, get} from '@ember/object';
 import {dasherize} from '@ember/string';
 
 // Fastboot support

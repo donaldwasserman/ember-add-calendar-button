@@ -16,9 +16,7 @@ export default Component.extend({
   target: '_blank',
   href: computed('event', function() {
     let event = get(this, 'event');
-    console.log(event);
-    console.log(get(this, 'event.start'));
-    console.log(get(this, 'startTime'));
+
     debugger;
     let args = {
       startTime: get(this, 'startTime'),
@@ -35,7 +33,6 @@ export default Component.extend({
   //Properties
   startTime: computed(function() {
     let start = get(this, 'event.start');
-    console.log(start);
     return (moment.isMoment(start)) ? start : moment(start);
   }),
   endTime: computed('event', function() {
