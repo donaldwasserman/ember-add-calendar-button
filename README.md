@@ -1,6 +1,31 @@
-# ember-calendar-button
+# ember-add-calendar-button
 
-This README outlines the details of collaborating on this Ember addon.
+Add calendar entries with comfort and style.
+
+Example usage:
+
+```hbs
+{{#calendar-button event as |b|}}
+  {{#b.google}}
+    Add To Google
+  {{/b.google}}
+  {{#b.ical}}
+    Add to Anything
+  {{/b.ical}}
+{{/calendar-button}}
+
+```
+
+The `event` object can be an EmberObject or pojo.
+```js
+  let event = Ember.object.create({
+    start: moment(), //moment or string
+    end: moment().add(4, 'hours'),
+    title: 'Meeting with Tomster',
+    description: 'Coffee to discuss Tomster and Zoey\'s upcoming raise',
+    location: '1234 North Port, Nowhere USA'
+  })
+```
 
 ## Installation
 

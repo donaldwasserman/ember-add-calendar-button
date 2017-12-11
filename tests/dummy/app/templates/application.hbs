@@ -1,3 +1,10 @@
-<h2 id="title">Welcome to Ember</h2>
+<h2 id="title">Add To Calendar Button</h2>
 
-{{outlet}}
+{{#calendar-button event as |b|}}
+  {{#b.google}}
+    Add To Goolge
+  {{/b.google}}
+  {{#b.ical}}
+    Add to Anything
+  {{/b.ical}}
+{{/calendar-button}}

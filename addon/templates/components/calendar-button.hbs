@@ -1,0 +1,13 @@
+
+
+{{#if hasBlock}}
+  {{yield
+    (hash
+      google=(component "types/google-cal" event=event)
+      outlook=(component "types/outlook-cal" event=event)
+      ical=(component "types/ical-cal" event=event)
+    )
+  }}
+{{else}}
+  {{types/ical-cal event=event}}
+{{/if}}

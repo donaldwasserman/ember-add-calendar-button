@@ -1,7 +1,7 @@
 {
-  "name": "ember-calendar-button",
+  "name": "ember-add-calendar-button",
   "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "description": "Create a link to add Google, iCal, and Outlook calendar entries",
   "keywords": [
     "ember-addon"
   ],
@@ -11,14 +11,16 @@
     "doc": "doc",
     "test": "tests"
   },
-  "repository": "",
+  "repository": "donaldwasserman/ember-add-calendar-button",
   "scripts": {
     "build": "ember build",
     "start": "ember server",
     "test": "ember try:each"
   },
   "dependencies": {
-    "ember-cli-babel": "^6.6.0"
+    "ember-moment": "^7.5.0",
+    "ember-cli-babel": "^6.6.0",
+    "ember-cli-htmlbars": "^2.0.1"
   },
   "devDependencies": {
     "broccoli-asset-rev": "^2.4.5",
@@ -29,6 +31,7 @@
     "ember-cli-htmlbars": "^2.0.1",
     "ember-cli-htmlbars-inline-precompile": "^1.0.0",
     "ember-cli-inject-live-reload": "^1.4.1",
+    "ember-cli-moment-shim": "^3.5.0",
     "ember-cli-qunit": "^4.0.0",
     "ember-cli-shims": "^1.1.0",
     "ember-cli-sri": "^2.1.0",
