@@ -5,18 +5,21 @@ import {assert} from '@ember/debug';
 import {get, getWithDefault, computed} from '@ember/object';
 import {alias} from '@ember/object/computed';
 
-
 export default Component.extend({
   layout,
   didRecieveAttrs() {
     this._super(...arguments);
     assert('`tagName` must be `a`', get(this, 'tagName') === 'a')
   },
-  attributeBindings: ['href', '_target'],
+  attributeBindings: ['href', 'target'],
   tagName: 'a',
-  _target: 'blank',
+  target: '_blank',
   href: computed('event', function() {
     let event = get(this, 'event');
+    console.log(event);
+    console.log(get(this, 'event.start'));
+    console.log(get(this, 'startTime'));
+    debugger;
     let args = {
       startTime: get(this, 'startTime'),
       duration: get(this, 'duration'),
@@ -25,17 +28,25 @@ export default Component.extend({
       description: get(event, 'description'),
       title: get(event, 'title')
     };
+
     return this.generateHref(args);
   }),
 
   //Properties
   startTime: computed(function() {
-    return moment(get(this, 'event.start'));
+    let start = get(this, 'event.start');
+    console.log(start);
+    return (moment.isMoment(start)) ? start : moment(start);
   }),
   endTime: computed('event', function() {
-    let event = get(this, 'event');
-    let start = get(event, 'start');
-    return moment(get(event, 'end')) || moment(start).add(90, 'minutes')
+    let start = get(this, 'startTime');
+    let end = get(this, 'event.end') || false;
+
+    if (end) {
+      return (moment.isMoment(end)) ? end : moment(end);
+    }
+
+    return start.add(90, 'minutes');
   }),
 
   duration: computed('event', 'startTime', 'endTime', function() {
