@@ -27,6 +27,8 @@ The `event` object can be an EmberObject or pojo.
   })
 ```
 
+**Note:** Totally stole a lot of the code from [here](https://github.com/carlsednaoui/add-to-calendar-buttons)
+
 ## Installation
 
 * `git clone <repository-url>` this repository
