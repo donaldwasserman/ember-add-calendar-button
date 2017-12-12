@@ -1,6 +1,6 @@
 {
   "name": "ember-add-calendar-button",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Create a link to add Google, iCal, and Outlook calendar entries",
   "keywords": [
     "ember-addon"
