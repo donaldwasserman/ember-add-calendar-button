@@ -16,8 +16,6 @@ export default Component.extend({
   target: '_blank',
   href: computed('event', function() {
     let event = get(this, 'event');
-
-    debugger;
     let args = {
       startTime: get(this, 'startTime'),
       duration: get(this, 'duration'),
