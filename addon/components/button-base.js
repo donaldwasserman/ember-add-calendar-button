@@ -28,6 +28,13 @@ export default Component.extend({
     return this.generateHref(args);
   }),
 
+  /**
+   * Just pass click event up the chain
+   * @private
+   */
+  click(event) {
+    get(this, 'onClick')(event);
+  },
   //Properties
   startTime: computed(function() {
     let start = get(this, 'event.start');

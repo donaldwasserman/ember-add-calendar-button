@@ -5,7 +5,7 @@ Add calendar entries with comfort and style.
 Example usage:
 
 ```hbs
-{{#calendar-button event as |b|}}
+{{#calendar-button event onClick=(action "myActionHere") as |b|}}
   {{#b.google}}
     Add To Google
   {{/b.google}}
