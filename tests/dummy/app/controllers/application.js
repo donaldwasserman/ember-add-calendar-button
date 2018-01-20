@@ -13,5 +13,12 @@ const Event = EmberObject.extend({
 export default Controller.extend({
   event: computed(function() {
     return Event.create()
-  })
+  }),
+  pojoEvent: {
+    start: moment(), //moment or string
+    end: moment().add(4, 'hours'),
+    title: 'Meeting with Tomster',
+    description: 'Coffee to discuss Tomster and Zoey\'s upcoming raise',
+    location: '1234 North Port, Nowhere USA'
+  }
 });

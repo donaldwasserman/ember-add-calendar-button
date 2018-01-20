@@ -12,7 +12,9 @@ export default Base.extend({
   attributeBindings: ['download'],
   download: computed('event', function() {
     let title = `${get(this, 'event.title')}-${get(this, 'startTime').format('YYYY-MM-DD')}`
-    return dasherize(title);
+    let safe = dasherize(title)
+    return `${safe
+    }.ics`;
   }),
   generateHref({startTime = '', endTime = '', location = '', title = '', description = ''}){
     if (!moment.isMoment(startTime)) {
