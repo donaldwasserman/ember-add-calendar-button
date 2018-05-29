@@ -2,6 +2,10 @@
 
 Add calendar entries with comfort and style.
 
+[![Build Status](https://travis-ci.com/donaldwasserman/ember-add-calendar-button.svg?branch=master)](https://travis-ci.com/donaldwasserman/ember-add-calendar-button)
+
+[![npm version](https://badge.fury.io/js/ember-add-calendar-button.svg)](https://badge.fury.io/js/ember-add-calendar-button)
+
 Installation
 ------------------------------------------------------------------------------
 
@@ -11,6 +15,7 @@ ember install ember-add-calendar-button
 
 Usage
 ------------------------------------------------------------------------------
+
 
 Example usage:
 
