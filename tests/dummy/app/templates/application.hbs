@@ -1,10 +1,10 @@
 <h2 id="title">Add To Calendar Button</h2>
 
-{{#calendar-button event as |b|}}
-  {{#b.google}}
-    Add To Goolge
+{{#calendar-button event id="test-id" as |b|}}
+  {{#b.google id="test-google"}}
+    Add to Goolge
   {{/b.google}}
-  {{#b.ical}}
+  {{#b.ical id="test-ical"}}
     Add to Anything
   {{/b.ical}}
 {{/calendar-button}}
