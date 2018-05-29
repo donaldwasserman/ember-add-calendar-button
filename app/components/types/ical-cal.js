@@ -1,1 +1,1 @@
-export { default } from 'ember-calendar-button/components/types/ical-cal';
+export { default } from 'ember-add-calendar-button/components/types/ical-cal';

@@ -1,5 +1,5 @@
 'use strict';
 
 module.exports = {
-  name: 'ember-calendar-button'
+  name: 'ember-add-calendar-button'
 };

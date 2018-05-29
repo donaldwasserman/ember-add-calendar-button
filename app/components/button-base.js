@@ -1,1 +1,1 @@
-export { default } from 'ember-calendar-button/components/button-base';
+export { default } from 'ember-add-calendar-button/components/button-base';

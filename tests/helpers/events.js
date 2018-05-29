@@ -1,6 +1,5 @@
-import Controller from '@ember/controller';
-import EmberObject, { computed } from '@ember/object';
 import moment from 'moment';
+import EmberObject from '@ember/object';
 
 const EmberEvent = EmberObject.extend({
   start: moment(), //moment or string
@@ -18,11 +17,4 @@ const PojoEvent = {
   location: '1234 North Port, Nowhere USA'
 };
 
-export default Controller.extend({
-  event: computed(function() {
-    return EmberEvent.create();
-  }),
-  pojoEvent: computed(function() {
-    return PojoEvent;
-  })
-});
+export { EmberEvent, PojoEvent };
