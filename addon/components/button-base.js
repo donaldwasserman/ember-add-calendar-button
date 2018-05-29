@@ -2,8 +2,7 @@ import Component from '@ember/component';
 import layout from '../templates/components/button-base';
 import moment from 'moment';
 import { assert } from '@ember/debug';
-import { get, getWithDefault, computed } from '@ember/object';
-import { alias } from '@ember/object/computed';
+import { get, computed } from '@ember/object';
 
 export default Component.extend({
   layout,
@@ -64,7 +63,8 @@ export default Component.extend({
 
   // Must Implment by exented component
   // Should return encodeURI()'d string
-  generateHref({ start, duration, location, description }) {
+  // Args = { start, duration, location, description }
+  generateHref() {
     assert('Please BYO method in subclass', false);
   },
   /**
